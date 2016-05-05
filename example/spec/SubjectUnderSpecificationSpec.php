@@ -21,11 +21,6 @@ final class SubjectUnderSpecificationSpec extends ObjectBehavior
         $this->beConstructedWith($collaborator);
     }
 
-    function it_is_initializable()
-    {
-        $this->shouldHaveType(SubjectUnderSpecification::class);
-    }
-
     function it_exact_promise_returns_a_value(Collaborator $collaborator)
     {
         $collaborator->invoke()->will(ExactPromise::it()->willReturn('value'));
