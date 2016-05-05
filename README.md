@@ -1,4 +1,4 @@
-Prophecy Common
+Prophecy Common [![Build Status](https://travis-ci.org/pamil/prophecy-common.png?branch=master)](https://travis-ci.org/pamil/prophecy-common)
 ===============
 
 Bunch of useful classes to solve some issues I've encountered while using PhpSpec. MIT licensed.
