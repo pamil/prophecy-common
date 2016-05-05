@@ -1,0 +1,23 @@
+language: php
+
+php:
+    - 7.0
+    - 5.6
+    - 5.5
+
+cache:
+    directories:
+        - vendor
+
+before_install:
+    - phpenv config-rm xdebug.ini || true
+
+    - composer self-update
+
+install:
+    - composer install --prefer-dist
+
+script:
+    - composer validate --strict
+
+    - vendor/bin/phpspec run -f pretty

@@ -1,0 +1,28 @@
+{
+    "name": "pamil/prophecy-common",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kamil Kokot",
+            "email": "kamil@kokot.me",
+            "homepage": "http://kamil.kokot.me"
+        }
+    ],
+    "require": {
+        "phpspec/prophecy": "^1.6"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.5"
+    },
+    "autoload": {
+        "psr-4": { "Pamil\\ProphecyCommon\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\Pamil\\ProphecyCommon\\": "spec/",
+
+            "Pamil\\ProphecyCommon\\Example\\": "example/src/",
+            "spec\\Pamil\\ProphecyCommon\\Example\\": "example/spec/"
+        }
+    }
+}
