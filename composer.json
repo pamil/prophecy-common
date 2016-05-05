@@ -1,5 +1,6 @@
 {
     "name": "pamil/prophecy-common",
+    "description": "Common helper classes for Prophecy",
     "license": "MIT",
     "authors": [
         {
