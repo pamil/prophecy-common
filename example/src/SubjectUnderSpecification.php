@@ -1,6 +1,6 @@
 <?php
 
-namespace Pamil\ProphecyCommon\Example;
+namespace example\Pamil\ProphecyCommon;
 
 /**
  * @author Kamil Kokot <kamil@kokot.me>

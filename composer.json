@@ -22,8 +22,8 @@
         "psr-4": {
             "spec\\Pamil\\ProphecyCommon\\": "spec/",
 
-            "Pamil\\ProphecyCommon\\Example\\": "example/src/",
-            "spec\\Pamil\\ProphecyCommon\\Example\\": "example/spec/"
+            "example\\Pamil\\ProphecyCommon\\": "example/src/",
+            "spec\\example\\Pamil\\ProphecyCommon\\": "example/spec/"
         }
     }
 }

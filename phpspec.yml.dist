@@ -5,7 +5,7 @@ suites:
         src_path: src
         spec_path: .
     example:
-        namespace: Pamil\ProphecyCommon\Example
-        psr4_prefix: Pamil\ProphecyCommon\Example
+        namespace: example\Pamil\ProphecyCommon
+        psr4_prefix: example\Pamil\ProphecyCommon
         src_path: example/src
         spec_path: example
