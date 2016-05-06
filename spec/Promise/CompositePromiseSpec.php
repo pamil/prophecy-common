@@ -2,7 +2,7 @@
 
 namespace spec\Pamil\ProphecyCommon\Promise;
 
-use Pamil\ProphecyCommon\Promise\ExactPromise;
+use Pamil\ProphecyCommon\Promise\CompositePromise;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Promise\PromiseInterface;
@@ -10,15 +10,15 @@ use Prophecy\Prophecy\MethodProphecy;
 use Prophecy\Prophecy\ObjectProphecy;
 
 /**
- * @mixin ExactPromise
+ * @mixin CompositePromise
  *
  * @author Kamil Kokot <kamil@kokot.me>
  */
-final class ExactPromiseSpec extends ObjectBehavior
+final class CompositePromiseSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(ExactPromise::class);
+        $this->shouldHaveType(CompositePromise::class);
     }
 
     function it_is_a_Prophecy_promise()

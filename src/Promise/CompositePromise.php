@@ -11,7 +11,7 @@ use Prophecy\Prophecy\ObjectProphecy;
 /**
  * @author Kamil Kokot <kamil@kokot.me>
  */
-final class ExactPromise implements PromiseInterface
+final class CompositePromise implements PromiseInterface
 {
     /**
      * @var PromiseInterface[]
