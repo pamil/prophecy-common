@@ -20,6 +20,9 @@ final class SubjectUnderSpecification
         $this->collaborator = $collaborator;
     }
 
+    /**
+     * @return mixed
+     */
     public function invokeCollabolator()
     {
         return $this->collaborator->invoke();

@@ -7,5 +7,8 @@ namespace Pamil\ProphecyCommon\Example;
  */
 interface Collaborator
 {
+    /**
+     * @return mixed
+     */
     public function invoke();
 }
