@@ -5,6 +5,11 @@ php:
     - 5.6
     - 5.5
 
+env:
+    matrix:
+        - COMPOSER_FLAGS="--prefer-lowest"
+        - COMPOSER_FLAGS=""
+
 cache:
     directories:
         - vendor
@@ -15,7 +20,7 @@ before_install:
     - composer self-update
 
 install:
-    - composer install --prefer-dist
+    - composer update --prefer-dist ${COMPOSER_FLAGS}
 
 script:
     - composer validate --strict
