@@ -33,11 +33,11 @@ $collabolator->mockedMethod()->will(
 ```php
 <?php
 
-namespace spec\Pamil\ProphecyCommon\Example;
+namespace spec\example\Pamil\ProphecyCommon;
 
+use example\Pamil\ProphecyCommon\Collaborator;
+use example\Pamil\ProphecyCommon\SubjectUnderSpecification;
 use Pamil\ProphecyCommon\Promise\CompositePromise;
-use Pamil\ProphecyCommon\Example\Collaborator;
-use Pamil\ProphecyCommon\Example\SubjectUnderSpecification;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Prophecy\Promise\ReturnPromise;
