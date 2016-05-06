@@ -30,11 +30,4 @@ final class ExactPromiseSpec extends ObjectBehavior
     {
         $this->shouldThrow(\BadMethodCallException::class)->during('execute', [[], $objectProphecy, $methodProphecy]);
     }
-
-    function it_throws_a_bad_method_call_exception_if_trying_to_add_another_promise_after_enabling_unexpected_calls_support()
-    {
-        $this->willReturn('value1')->andThenReturn('value2')->alsoForUnexpectedCalls();
-
-        $this->shouldThrow(\BadMethodCallException::class)->during('andThenReturn', ['value3']);
-    }
 }

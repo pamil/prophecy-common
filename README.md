@@ -28,8 +28,6 @@ $collabolator->mockedMethod()->will(
  - `ExactPromise::will()` and `ExactPromise::andThen()` behave the same as `MethodProphecy::will()`, but they can receive
  more than one argument just as the previous methods
 
- - If you want the last promise being always active, use `ExactPromise::alsoForUnexpectedCalls()` just after the that promise
-
 #### Example
 
 ```php
@@ -159,14 +157,15 @@ final class SubjectUnderSpecificationSpec extends ObjectBehavior
         $this->invokeCollabolator()->shouldReturn('custom promise value');
     }
 
-    function it_exact_promise_returns_a_value_also_for_unexpected_calls(Collaborator $collaborator)
+    function it_exact_promise_executes_the_last_promise_if_called_more_times_than_explicitly_defined(Collaborator $collaborator)
     {
         $collaborator->invoke()->will(
-            ExactPromise::it()->willReturn('value')->alsoForUnexpectedCalls()
+            ExactPromise::it()->willReturn('value1', 'value2')
         );
 
-        $this->invokeCollabolator()->shouldReturn('value');
-        $this->invokeCollabolator()->shouldReturn('value');
+        $this->invokeCollabolator()->shouldReturn('value1');
+        $this->invokeCollabolator()->shouldReturn('value2');
+        $this->invokeCollabolator()->shouldReturn('value2');
     }
 } 
 ```
